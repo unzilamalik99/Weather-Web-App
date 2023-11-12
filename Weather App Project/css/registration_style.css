@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f6f8fa;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========================== Alert message style ========================== */
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+ 
+ .success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+/* ========================== Form container style ========================== */
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+                0px 5px 12px -2px rgba(0, 0, 0, 0.1),
+                0px 18px 36px -6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+}
+
+/* ========================== Form header style ========================== */
+
+.container .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    background-color: #1b82d6;
+}
+
+.container .title .logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.container .title .logo img {
+    margin-top: 5px;
+    width: 45px;
+    height: 35px;
+}
+
+.container .title .logo h2 {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.container .title .logo h2::before {
+    content: "Forecast";
+    position: absolute;
+    font-size: 12px;
+    top: 25px;
+    bottom: 0;
+    left: 2px;
+}
+
+.container .title h3 {
+    color: #fff;
+    margin-right: 20px;
+    position: relative;
+}
+
+.container .title h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right, #ffffff, #1b82d6);
+}
+
+/* ========================== Input data form style ========================== */
+
+.user_details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.welcome {
+    display: list-item;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+
+.user_details .input_box {
+    width: calc(100% / 2 - 20px);
+    /* margin: 0 0 12px 0; */
+}
+
+.input_box label::after {
+    content: " *";
+    color: red;
+}
+
+.input_box input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f6f8fa;
+    font-family: 'Poppins', sans-serif;
+    transition: all 120ms ease-out 0s;
+}
+
+.input_box input:focus,
+.input_box input:valid {
+    box-shadow: 0px 0px 0px 2px #1b9bd6;
+}
+
+/* ========================== Login/Signup btn style ========================== */
+
+.reg_btn {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+
+.reg_btn input {
+    height: 45px;
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #1b82d6;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    transition: 0.2s ease;
+}
+
+.reg_btn input:hover {
+    background: #0f72c3;
+}
+
+/* ========================== Redirect signup/login style ========================== */
+
+h4 {
+	font-size: 14px;
+	display: flex;
+    justify-content: center;
+    justify-items: center;
+	padding-bottom: 30px;
+	text-decoration: none;
+	color: #444;
+}
+
+h4 a{
+	font-size: 14px;
+    padding-inline: 5px;
+	text-decoration: none;
+	color: #444;
+}
+
+
+h4 a:hover {
+    cursor: pointer;
+    color: #1b82d6;
+	text-decoration: underline;
+}
+
+/* ========================== Responsive style ========================== */
+
+@media screen and (max-width: 584px) {
+    .user_details {
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .user_details::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .user_details .input_box {
+        width: 100%;
+    }
+}
